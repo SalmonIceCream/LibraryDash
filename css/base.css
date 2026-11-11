@@ -1,1 +1,32 @@
-/* Gaya dasar dan reset global. */
+/* base.css: warna, font, ukuran dasar, tombol */
+:root{
+  --cream:#F7ECD4; --paper:#FCF5E4; --beige:#E6D2AA; --honey:#E2A63A; --terra:#B65B3D;
+  --sage:#86A67E; --teal:#46868A; --rose:#D4969A; --ink:#4A3022; --ink2:#7B5A44; --desk:#6B4A36;
+  --f-display:'Baloo 2','Trebuchet MS',sans-serif; --f-body:'Nunito','Segoe UI',sans-serif;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{height:100%;box-sizing:border-box}
+body{margin:0;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;
+  background:var(--desk);color:var(--ink);font:700 16px/1.4 var(--f-body);overflow:hidden;
+  padding-block:10px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+svg text{font-family:var(--f-display)}
+button{font-family:inherit}
+:focus-visible{outline:3px solid var(--teal);outline-offset:3px}
+#wrap{flex:1;min-height:0;width:100%;display:grid;place-items:center}
+.rotate{display:none;margin:8px 0 0;font:800 14px var(--f-body);color:#F0DDB8;text-align:center}
+@media (orientation:portrait){.rotate{display:block}}
+/* buttons */
+.btn{--b:var(--g,var(--terra));--bd:var(--gd,#8F4229);appearance:none;border:0;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:.8cqw;
+  font:800 max(14px,2.1cqw)/1 var(--f-display);color:#FFF6E2;background:var(--b);min-height:44px;
+  padding:max(10px,1.1cqw) max(18px,2.6cqw);border-radius:999px;letter-spacing:.01em;
+  box-shadow:0 .5cqw 0 var(--bd),0 1cqw 1.6cqw rgba(74,48,34,.25);transition:transform .12s,box-shadow .12s}
+.btn:hover{transform:translateY(-.2cqw)}
+.btn:active{transform:translateY(.4cqw);box-shadow:0 .1cqw 0 var(--bd)}
+.btn.ghost{--b:#FBEFD0;--bd:#CDB382;color:var(--ink)}
+.btn.sm{font-size:max(13px,1.7cqw);padding:max(8px,.7cqw) max(14px,1.6cqw);min-height:44px}
+.round{appearance:none;border:0;cursor:pointer;width:max(44px,5cqw);height:max(44px,5cqw);border-radius:50%;background:#FBEFD0;color:var(--ink);
+  display:grid;place-items:center;box-shadow:0 .35cqw 0 #CDB382,0 .8cqw 1.4cqw rgba(74,48,34,.25);transition:transform .12s}
+.round:active{transform:translateY(.3cqw)}
+.round svg{width:56%;height:56%}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition-duration:.01ms!important}}

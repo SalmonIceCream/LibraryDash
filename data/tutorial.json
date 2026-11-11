@@ -1,1 +1,62 @@
-{"games": []}
+{
+  "hints": {
+    "open": "Tekan tombol Masuk Perpustakaan untuk memulai petualangan.",
+    "world": "Ketuk sebuah tempat di perpustakaan untuk melihat permainannya. Ketuk sekali lagi untuk membuka cara bermainnya.",
+    "tut": "Baca langkah-langkahnya, lalu tekan Mulai Bermain.",
+    "game": "Ikuti petunjuk di layar. Tekan tombol jeda kalau butuh istirahat."
+  },
+  "games": [
+    {
+      "id": "dash",
+      "name": "Library Dash",
+      "invite": "Layani pengunjung secepat kilat!",
+      "colors": { "g": "#B65B3D", "gt": "#F2D3C0", "gd": "#8F4229" },
+      "pin": [700, 322],
+      "desc": "Jadilah pustakawan! Layani pengunjung yang ingin meminjam dan mengembalikan buku, lalu jaga mereka tetap senang.",
+      "steps": [
+        "Lihat kategori buku yang diminta pengunjung.",
+        "Ambil buku dari rak kategori yang tepat.",
+        "Serahkan buku sebelum pengunjung bosan menunggu."
+      ]
+    },
+    {
+      "id": "kenali",
+      "name": "Kenali Perpustakaan",
+      "invite": "Jelajahi setiap sudut perpustakaan.",
+      "colors": { "g": "#4F7448", "gt": "#D8E4CF", "gd": "#38553A" },
+      "pin": [400, 590],
+      "desc": "Berkeliling di dalam perpustakaan dan kenali benda-benda penting beserta kegunaannya.",
+      "steps": [
+        "Ketuk benda bertanda tanya di dalam ruangan.",
+        "Baca penjelasan singkat tentang benda itu.",
+        "Temukan semua benda untuk jadi ahli perpustakaan."
+      ]
+    },
+    {
+      "id": "susun",
+      "name": "Susun Kata",
+      "invite": "Susun huruf menjadi kata ajaib!",
+      "colors": { "g": "#9A6A0E", "gt": "#F6E2AE", "gd": "#6F4A06" },
+      "pin": [1290, 440],
+      "desc": "Susun balok huruf menjadi kata-kata yang ada di perpustakaan.",
+      "steps": [
+        "Lihat gambar petunjuk.",
+        "Geser huruf ke kotak kosong.",
+        "Susun sampai katanya lengkap."
+      ]
+    },
+    {
+      "id": "memory",
+      "name": "Memory Match",
+      "invite": "Temukan pasangan kartu yang sama!",
+      "colors": { "g": "#2F7478", "gt": "#CBE2DF", "gd": "#1F5558" },
+      "pin": [800, 700],
+      "desc": "Ingat letak gambar di balik kartu, lalu cocokkan semua pasangannya.",
+      "steps": [
+        "Ketuk kartu untuk membukanya.",
+        "Buka dua kartu yang bergambar sama.",
+        "Cocokkan semua pasangan kartu."
+      ]
+    }
+  ]
+}

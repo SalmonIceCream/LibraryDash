@@ -1,1 +1,26 @@
-{"levels": []}
+{
+  "lesson": "Kata-kata di perpustakaan ada di sekeliling kita: buku, rak, meja, dan lampu. Kamu sudah bisa mengejanya!",
+  "levels": [
+    { "words": [
+      { "word": "BUKU",  "hint": "Dibaca setiap hari" },
+      { "word": "RAK",   "hint": "Tempat menyimpan buku" },
+      { "word": "JAM",   "hint": "Menunjukkan waktu" },
+      { "word": "MEJA",  "hint": "Tempat meletakkan buku" },
+      { "word": "PETA",  "hint": "Menunjukkan letak tempat" }
+    ] },
+    { "words": [
+      { "word": "KURSI",  "hint": "Tempat duduk saat membaca" },
+      { "word": "LAMPU",  "hint": "Menerangi saat gelap" },
+      { "word": "PENSIL", "hint": "Alat untuk menulis" },
+      { "word": "KUCING", "hint": "Hewan berbulu yang mengeong" },
+      { "word": "GLOBE",  "hint": "Bola peta dunia" }
+    ] },
+    { "words": [
+      { "word": "KAMUS",   "hint": "Buku arti kata" },
+      { "word": "KOMIK",   "hint": "Buku cerita bergambar" },
+      { "word": "GAMBAR",  "hint": "Dilukis atau digambar" },
+      { "word": "DONGENG", "hint": "Cerita sebelum tidur" },
+      { "word": "TANAMAN", "hint": "Tumbuh di pot dan perlu disiram" }
+    ] }
+  ]
+}

@@ -1,1 +1,20 @@
-/* Gaya untuk dialog dan overlay. */
+/* dialog.css: overlay, dialog, toast */
+/* overlays */
+.ov{position:absolute;inset:0;z-index:60;display:grid;place-items:center;background:rgba(74,48,34,.55);opacity:0;visibility:hidden;transition:opacity .25s,visibility 0s linear .25s}
+.ov.on{opacity:1;visibility:visible;transition-delay:0s}
+.dlg{width:min(46cqw,92%);max-height:92%;overflow:auto;background:#FFFBF0;border:.3cqw solid var(--ink);padding:2.2cqw 3cqw 2.6cqw;text-align:center;
+  border-radius:3cqw 2.4cqw 3.2cqw 2.2cqw / 2.4cqw 3.2cqw 2.2cqw 3cqw;box-shadow:0 1.2cqw 0 rgba(74,48,34,.28);
+  transform:translateY(2cqw) scale(.96);transition:transform .3s cubic-bezier(.3,1.5,.5,1)}
+.ov.on .dlg{transform:none}
+.dlg-art svg{height:11cqw;width:auto;max-width:100%}
+.dlg h3{margin:.4cqw 0;font:800 3.6cqw/1.05 var(--f-display);color:var(--g,var(--terra))}
+.dlg-b{font:700 max(13px,2cqw)/1.4 var(--f-body);color:var(--ink2)}
+.dlg-a{display:flex;flex-wrap:wrap;gap:1.2cqw;justify-content:center;margin-top:1.6cqw}
+.sw-row{display:flex;align-items:center;justify-content:space-between;gap:2cqw;margin:1.2cqw 0 0;padding:.8cqw 1.6cqw;background:#F6E8C8;border-radius:999px;font:800 max(14px,2cqw) var(--f-body);color:var(--ink)}
+.sw{appearance:none;border:0;cursor:pointer;width:max(56px,7cqw);height:max(30px,3.7cqw);border-radius:999px;background:#B9A481;position:relative;transition:background .2s;flex:none}
+.sw::after{content:"";position:absolute;top:12%;left:5%;width:38%;height:76%;border-radius:50%;background:#FFF6E2;box-shadow:0 .2cqw .4cqw rgba(74,48,34,.35);transition:transform .2s}
+.sw[aria-checked=true]{background:var(--teal)}
+.sw[aria-checked=true]::after{transform:translateX(120%)}
+.toast{position:absolute;left:50%;bottom:3cqw;transform:translate(-50%,2cqw);opacity:0;pointer-events:none;z-index:70;background:var(--ink);color:#FFF6E2;
+  border-radius:999px;padding:.8cqw 2.2cqw;font:800 max(13px,2cqw) var(--f-display);transition:opacity .25s,transform .25s;white-space:nowrap}
+.toast.on{opacity:1;transform:translate(-50%,0)}

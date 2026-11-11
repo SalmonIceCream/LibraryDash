@@ -1,1 +1,11 @@
-{"objects": []}
+{
+  "lesson": "Setiap benda di perpustakaan punya kegunaan. Rak untuk menyimpan buku, meja layanan untuk meminjam dan mengembalikan buku.",
+  "objects": [
+    { "id": "rak",   "name": "Rak Buku",         "text": "Buku disusun menurut kategori, jadi mudah dicari." },
+    { "id": "jam",   "name": "Jam Dinding",      "text": "Perpustakaan punya jam buka. Datanglah tepat waktu, ya!" },
+    { "id": "papan", "name": "Papan Pengumuman", "text": "Di sini ada aturan: bicara pelan, rapikan buku, jaga kebersihan." },
+    { "id": "globe", "name": "Globe",            "text": "Buku peta dan globe membantu kita mengenal dunia." },
+    { "id": "meja",  "name": "Meja Layanan",     "text": "Di sinilah kita meminjam dan mengembalikan buku." },
+    { "id": "baca",  "name": "Pojok Baca",       "text": "Tempat nyaman untuk membaca. Jaga ketenangan, ya!" }
+  ]
+}
