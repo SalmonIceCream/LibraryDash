@@ -1,1 +1,18 @@
-{"symbols": []}
+{
+  "lesson": "Memperhatikan dan mengingat itu seru. Di perpustakaan, benda-benda yang sama dikelompokkan supaya mudah ditemukan.",
+  "levels": [
+    { "rows": 2, "cols": 3 },
+    { "rows": 3, "cols": 4 },
+    { "rows": 4, "cols": 4 }
+  ],
+  "symbols": [
+    { "id": "buku",    "name": "Buku" },
+    { "id": "bintang", "name": "Bintang" },
+    { "id": "hantu",   "name": "Burung hantu" },
+    { "id": "pensil",  "name": "Pensil" },
+    { "id": "kacamata","name": "Kacamata" },
+    { "id": "kucing",  "name": "Kucing" },
+    { "id": "tanaman", "name": "Tanaman" },
+    { "id": "globe",   "name": "Globe" }
+  ]
+}

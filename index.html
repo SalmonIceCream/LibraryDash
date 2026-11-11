@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#6B4A36">
     <title>Library Adventure</title>
     <link rel="manifest" href="manifest.webmanifest">
     <link rel="stylesheet" href="css/base.css">
@@ -12,7 +13,85 @@
     <link rel="stylesheet" href="css/dialog.css">
   </head>
   <body>
-    <main id="stage"></main>
+    <div id="wrap">
+      <main id="stage" class="stage" aria-label="Library Adventure">
+        <svg id="defs" aria-hidden="true" focusable="false" style="position:absolute;width:0;height:0;overflow:hidden">
+          <defs>
+            <filter id="wc" x="-10%" y="-10%" width="120%" height="120%">
+              <feTurbulence type="fractalNoise" baseFrequency=".7" numOctaves="2" seed="3" result="noise"/>
+              <feDisplacementMap in="SourceGraphic" in2="noise" scale="1.5"/>
+            </filter>
+          </defs>
+        </svg>
+
+        <section class="screen" id="s-open" aria-label="Layar pembuka">
+          <div class="fill-svg" id="open-bg"></div>
+          <div class="book">
+            <div class="pg-l" id="open-art"></div>
+            <div class="pg-r">
+              <p class="kicker">Petualangan dimulai di sini</p>
+              <h1 class="title">Library<span>Adventure</span></h1>
+              <p class="say">Ayo, jelajahi perpustakaan dan temukan permainan seru!</p>
+              <button class="btn" type="button" id="enter">Masuk Perpustakaan</button>
+            </div>
+          </div>
+        </section>
+
+        <section class="screen" id="s-world" aria-label="Dunia perpustakaan">
+          <div id="world"></div>
+          <div class="tip" id="tip">
+            <h3 id="tip-t"></h3>
+            <p id="tip-p"></p>
+            <button class="btn sm" type="button" id="tip-go">Masuk</button>
+          </div>
+          <p class="hint" id="hint">Ketuk sebuah tempat untuk melihatnya.</p>
+        </section>
+
+        <section class="screen" id="s-tut" aria-label="Cara bermain">
+          <div class="tut-art" id="tut-art"></div>
+          <div class="tut-card">
+            <p class="kicker">Cara bermain</p>
+            <h2 id="tut-title"></h2>
+            <p id="tut-desc"></p>
+            <ol id="tut-steps"></ol>
+            <div class="row">
+              <button class="btn" type="button" id="tut-start">Mulai Bermain</button>
+              <button class="btn ghost" type="button" id="tut-back">Kembali</button>
+            </div>
+          </div>
+        </section>
+
+        <section class="screen" id="s-game" aria-label="Permainan"></section>
+
+        <div class="util-l">
+          <button class="round" type="button" id="home" aria-label="Kembali ke beranda">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11.5 12 4l9 7.5M5.5 10v10h5v-6h3v6h5V10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+        </div>
+        <div class="util">
+          <button class="round snd" type="button" id="snd" data-snd aria-pressed="true" aria-label="Suara">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path class="i-on" d="M3 9v6h4l5 4V5L7 9H3Zm12.5-.5a5 5 0 0 1 0 7m2.5-9.5a8.5 8.5 0 0 1 0 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path class="i-off" d="M3 9v6h4l5 4V5L7 9H3Zm13 1 5 5m0-5-5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          <button class="round" type="button" id="help" aria-label="Bantuan">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M9.5 9a2.6 2.6 0 1 1 4.5 1.8c-1.2 1.1-2 1.4-2 3M12 17.5v.1" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </button>
+        </div>
+
+        <div class="ov" id="ov" role="presentation">
+          <section class="dlg" role="dialog" aria-modal="true" aria-labelledby="dlg-t">
+            <div class="dlg-art" id="dlg-art"></div>
+            <h3 id="dlg-t"></h3>
+            <div class="dlg-b" id="dlg-b"></div>
+            <div class="dlg-a" id="dlg-a"></div>
+          </section>
+        </div>
+        <div class="toast" id="toast" role="status" aria-live="polite"></div>
+      </main>
+      <p class="rotate">Putar perangkat ke posisi lanskap untuk pengalaman terbaik.</p>
+    </div>
     <script type="module" src="js/main.js"></script>
   </body>
 </html>

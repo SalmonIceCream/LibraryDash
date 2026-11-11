@@ -1,7 +1,7 @@
 /* SusunKata (UC-08): susun huruf menjadi kata bertema perpustakaan. Seret atau ketuk huruf. */
 import { $, DARK } from '../screens/art.js';
 import { Game } from './Game.js';
-import { CLUE } from './susunArt.js';
+import { CLUE } from './SusunArt.js';
 
 let level = 0;   // shortcut: tingkat hanya di memori; kembali ke 1 saat halaman dimuat ulang (localStorage hanya untuk suara)
 
